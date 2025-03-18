@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("images/newYork.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: top;
+}
+
+/*viables for colours and fonts*/
+:root {
+    --black: #000000;
+    --white: #fdfdeb;
+    --green:#317c15;
+
+    --font:"Abril Fatface", serif;
+    --displayfont: "Signika", sans-serif;
+}
+
+header, footer {
+    margin: 0px;
+    padding: 1%;
+    text-align: center;
+    color: var(--white);
+}
+
+
+#question{
+    margin: 0px;
+    padding: 1%;
+    text-align: center;
+    height: 500px;
+    
+
+
+}
+
+

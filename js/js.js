@@ -50,10 +50,7 @@ function nr2() {
     <label><input type="radio" name="capital" value="Frisk" onclick="fail()">Answer 3</label>
     `
 
-    headerr.innerHTML += `
-        <button onclick="document.location='index.html'">Start over</button>
-
-    `
+   
 
 }
 
@@ -72,9 +69,6 @@ function nr3() {
     <label><input type="radio" name="capital" value="Frisk" onclick="fail()">Answer 3</label>
     `
 
-    headerr.innerHTML += `
-        <button onclick="document.location='index.html'">Start over</button>
-
-    `
+    
 
 }

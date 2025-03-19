@@ -16,8 +16,8 @@ body {
     --white: #fdfdeb;
     --green:#317c15;
 
-    --font:"Abril Fatface", serif;
-    --displayfont: "Signika", sans-serif;
+    --displayfont:"shlop", sans-serif;
+    --font: "Signika", sans-serif;
 }
 
 main {
@@ -34,6 +34,7 @@ header, footer {
 
 h1 {
     font-size: 50px;
+    font-family: var(--displayfont);
 }
 
 

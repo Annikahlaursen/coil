@@ -21,7 +21,7 @@ body {
 }
 
 main {
-    height: 500px;
+    height: 600px;
 
 }
 
@@ -42,8 +42,8 @@ h1 {
     margin: auto;
     padding: 2%;
     text-align: center;
-    height: 300px;
-    width: 700px;
+    height: 500px;
+    width: 800px;
     background-color: rgba(0, 0, 0, 0.776);
 
 
@@ -68,4 +68,19 @@ button:hover {
 }
 
 
+#question img {
+    width: 40%;
+    text-align: center;
+}
 
+#headerr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+    margin-left: 38%;
+}
+
+#headerr button {
+    padding: 10px;
+}

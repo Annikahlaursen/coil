@@ -1,27 +1,43 @@
 /* file: js.js 
 purpuse: to make a quiz to escape new york by identyfying zombies*/
 
+let currentAnswerKey = ''; // denne opdateres i hvert spørgsmål
+
+document.addEventListener("keydown", function(event) {
+    if (["w", "a", "d"].includes(event.key) === currentAnswerKey) {
+        nextQuestion(); // den funktion der går videre til næste spørgsmål
+    } else if (["w", "a", "d"].includes(event.key)) {
+        fail();
+    }
+});
 
 
 // start function with the first question
 function start() {
+    currentAnswerKey = 'w'; // 'd' svarer til korrekt svar i spørgsmål 2
+
     question.innerHTML = `
     <p>
         Question 1 out of 11 <br> <br>
         Which teacher is this zombie? <br>    
     </p>
 
-    <img src="images/jeanne.jpg" alt="Zombie"> <br> 
+    <img src="images/jeanne.jpg" alt="Zombie"> <br>
 
-    <label><input type="radio" name="capital" value="Able" onclick="nr2()">Jeanne Bødker Nissen</label>
-    <label><input type="radio" name="capital" value="Frugt" onclick="fail()">Caroline Wosh Niacki</label>
-    <label><input type="radio" name="capital" value="Frisk" onclick="fail()">Sanne Salemonsen</label>
+    <label><input type="radio" name="capital">Jeanne Bødker Nissen (W)</label><br>
+    <label><input type="radio" name="capital">Caroline Wosh Niacki (A)</label><br>
+    <label><input type="radio" name="capital">Sanne Salemonsen (D)</label>
     `
 
     headerr.innerHTML += `
         <button onclick="document.location='index.html'">Start over</button>
 
     `
+
+    function nextQuestion() {
+        // kalder næste funktion i rækken (nr2, nr3 osv.)
+        nr2();
+    }
 
 }
 
@@ -37,6 +53,8 @@ function fail() {
 
 // start function with the first question
 function nr2() {
+    currentAnswerKey = 'd'; // 'd' svarer til korrekt svar i spørgsmål 2
+
     question.innerHTML = `
     <p>
         Question 2 out of 11 <br> <br>
@@ -50,10 +68,16 @@ function nr2() {
     <label><input type="radio" name="capital" value="Frisk" onclick="nr3()">Line Skjødt</label>
     `
 
+    function nextQuestion() {
+        // kalder næste funktion i rækken (nr2, nr3 osv.)
+        nr3();
+    }
 }
 
 
 function nr3() {
+    currentAnswerKey = 'd'; // 'd' svarer til korrekt svar i spørgsmål 2
+
     question.innerHTML = `
     <p>
         Question 3 out of 11 <br> <br>
@@ -66,9 +90,16 @@ function nr3() {
     <label><input type="radio" name="capital" value="Frugt" onclick="fail()">Aniek Hauer</label>
     <label><input type="radio" name="capital" value="Frisk" onclick="fail()">Petra Cruyff</label>
     `
+
+    function nextQuestion() {
+        // kalder næste funktion i rækken (nr2, nr3 osv.)
+        nr4();
+    }
 }
 
 function nr4() {
+    currentAnswerKey = 'd'; // 'd' svarer til korrekt svar i spørgsmål 2
+
     question.innerHTML = `
     <p>
         Question 4 out of 11 <br> <br>
@@ -81,9 +112,16 @@ function nr4() {
     <label><input type="radio" name="capital" value="Frugt" onclick="nr5()">Johan Cruijff</label>
     <label><input type="radio" name="capital" value="Frisk" onclick="fail()">Noa Lang</label>
     `
+
+    function nextQuestion() {
+        // kalder næste funktion i rækken (nr2, nr3 osv.)
+        nr5();
+    }
 }
 
 function nr5() {
+    currentAnswerKey = 'd'; // 'd' svarer til korrekt svar i spørgsmål 2
+
     question.innerHTML = `
     <p>
         Question 5 out of 11 <br> <br>
@@ -96,9 +134,16 @@ function nr5() {
     <label><input type="radio" name="capital" value="Frugt" onclick="nr6()">Mette Frederiksen</label>
     <label><input type="radio" name="capital" value="Frisk" onclick="fail()">Pernille Vermund</label>
     `
+
+    function nextQuestion() {
+        // kalder næste funktion i rækken (nr2, nr3 osv.)
+        nr6();
+    }
 }
 
 function nr6() {
+    currentAnswerKey = 'd'; // 'd' svarer til korrekt svar i spørgsmål 2
+
     question.innerHTML = `
     <p>
         Question 6 out of 11 <br> <br>
@@ -114,6 +159,8 @@ function nr6() {
 }
 
 function nr7() {
+    currentAnswerKey = 'd'; // 'd' svarer til korrekt svar i spørgsmål 2
+
     question.innerHTML = `
     <p>
         Question 7 out of 11 <br> <br>
@@ -129,6 +176,8 @@ function nr7() {
 }
 
 function nr8() {
+    currentAnswerKey = 'd'; // 'd' svarer til korrekt svar i spørgsmål 2
+
     question.innerHTML = `
     <p>
         Question 8 out of 11 <br> <br>
@@ -144,6 +193,8 @@ function nr8() {
 }
 
 function nr9() {
+    currentAnswerKey = 'd'; // 'd' svarer til korrekt svar i spørgsmål 2
+
     question.innerHTML = `
     <p>
         Question 9 out of 11 <br> <br>
@@ -159,6 +210,8 @@ function nr9() {
 }
 
 function nr10() {
+    currentAnswerKey = 'd'; // 'd' svarer til korrekt svar i spørgsmål 2
+
     question.innerHTML = `
     <p>
         Question 10 out of 11 <br> <br>
@@ -174,6 +227,8 @@ function nr10() {
 }
 
 function nr11() {
+    currentAnswerKey = 'd'; // 'd' svarer til korrekt svar i spørgsmål 2
+
     question.innerHTML = `
     <p>
         Question 11 out of 11 <br> <br>

@@ -1,5 +1,5 @@
 let currentQuestion = 0; // Holder styr på hvor vi er i quizzen
-const correctAnswers = ['w', 'd', 'w', 'a', 'd', 'd', 'd', 'a', 'w', 'd', 'w']; // Liste over rigtige svar
+const correctAnswers = ['w', 'd', 'w', 'a', 'd', 'd', 'd', 'a', 'w', 'a', 'w']; // Liste over rigtige svar
 
 document.addEventListener("keydown", function(event) {
     if (event.key === correctAnswers[currentQuestion]) {

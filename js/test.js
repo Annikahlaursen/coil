@@ -1,5 +1,5 @@
 let currentQuestion = 0; // Holder styr på hvor vi er i quizzen
-const correctAnswers = ['w', 'd', 'w', 'a', 'd', 'd', 'd', 'a', 'w', 'a', 'w']; // Liste over rigtige svar
+const correctAnswers = ['w', 'd', 'w', 'a', 'a', 'd', 'd', 'a', 'w', 'a', 'w']; // Liste over rigtige svar
 
 document.addEventListener("keydown", function(event) {
     if (event.key === correctAnswers[currentQuestion]) {
@@ -87,17 +87,21 @@ function loadQuestion(index) {
         </p>
 
         <img src="${q.image}" alt="Zombie"> <br> 
-
-        <label>${q.options[0]}</label><br>
-        <label>${q.options[1]}</label><br>
-        <label>${q.options[2]}</label>
+        <div class="labels">
+            <label>${q.options[0]}</label>
+            <label>${q.options[1]}</label>
+            <label>${q.options[2]}</label>
+        </div>
     `;
 }
 
 function start() {
     currentQuestion = 0;
     loadQuestion(currentQuestion);
-    headerr.innerHTML = `<button onclick="document.location='index.html'">Start over</button>`;
+    //headerr.innerHTML = `<button onclick="document.location='index.html'">Start over</button>`;
+    document.getElementById("bod").style.backgroundImage="url('images/blur.jpg')";
+
+
 }
 
 function fail() {
@@ -105,5 +109,19 @@ function fail() {
 }
 
 function win() {
-    question.innerHTML = `<h2>Congratulations! <br> You survived the zombie apocalypse!</h2> <button onclick="document.location='index.html'">Start over</button>`;
+    question.innerHTML = `
+    <h2>You made it!</h2>
+    <p>Congratulations! You survived the zombie apocalypse and got out of New York just in time. The peace has returned, for now...</p> 
+    <button id="push" onclick="document.location='index.html'">Start over</button>
+    `
+    document.getElementById("bod").style.backgroundImage="url('images/new york.jpg')";
+    document.getElementById("main").style.backgroundColor="rgba(237, 251, 252, 0.69)";
+    document.getElementById("main").style.color="black";
+    document.getElementById("push").style.backgroundColor="var(--purple2)";
+    document.getElementById("push").style.border ="4px solid var(--purple)";
+
+
+
+
+
 }

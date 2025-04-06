@@ -114,7 +114,7 @@ function win() {
     <p>Congratulations! You survived the zombie apocalypse and got out of New York just in time. The peace has returned, for now...</p> 
     <button id="push" onclick="document.location='index.html'">Start over</button>
     `
-    document.getElementById("bod").style.backgroundImage="url('images/new york.jpg')";
+    document.getElementById("bod").style.backgroundImage="url('images/new-york-color-new.jpg')";
     document.getElementById("main").style.backgroundColor="rgba(237, 251, 252, 0.69)";
     document.getElementById("main").style.color="black";
     document.getElementById("push").style.backgroundColor="var(--purple2)";

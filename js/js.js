@@ -23,16 +23,17 @@ function start() {
     </p>
 
     <img src="images/jeanne.jpg" alt="Zombie"> <br>
-
-    <label><input type="radio" name="capital">Jeanne Bødker Nissen (W)</label><br>
-    <label><input type="radio" name="capital">Caroline Wosh Niacki (A)</label><br>
-    <label><input type="radio" name="capital">Sanne Salemonsen (D)</label>
+    <div id="labels">
+            <label>Jeanne Bødker Nissen (W)</label>
+            <label>Caroline Wosh Niacki (A)</label>
+            <label>Sanne Salemonsen (D)</label>
+    </div>
     `
 
-    headerr.innerHTML += `
+    /*headerr.innerHTML += `
         <button onclick="document.location='index.html'">Start over</button>
 
-    `
+    `*/
 
     function nextQuestion() {
         // kalder næste funktion i rækken (nr2, nr3 osv.)
@@ -40,6 +41,7 @@ function start() {
     }
 
 }
+
 
 // function for when you get one wrong and die
 function fail() {
@@ -120,7 +122,7 @@ function nr4() {
 }
 
 function nr5() {
-    currentAnswerKey = 'd'; // 'd' svarer til korrekt svar i spørgsmål 2
+    currentAnswerKey = 'a'; // 'd' svarer til korrekt svar i spørgsmål 2
 
     question.innerHTML = `
     <p>

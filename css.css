@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url("images/newYork.png");
+    background-image: url("images/back.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: top;
@@ -14,9 +17,13 @@ body {
 :root {
     --black: #000000;
     --white: #fdfdeb;
-    --green:#317c15;
+    --green:#2e840f;
+    --green2: #7dbe66;
+    --purple: #97078e;
+    --purple2: #eaa5f8;
 
-    --displayfont:"shlop", sans-serif;
+
+    --displayfont:"Nosifer", sans-serif;
     --font: "Signika", sans-serif;
 }
 
@@ -25,53 +32,112 @@ main {
 
 }
 
-header, footer {
+
+
+/*footer {
     margin: 0px;
     padding: 1%;
     text-align: center;
     color: var(--black);
-}
+}*/
 
 h1 {
     font-size: 50px;
     font-family: var(--displayfont);
+    color: var(--green2);
+    text-shadow: 2px 2px var(--green);
+
+    margin-top: 0px;
+}
+
+h2 {
+    font-family: var(--font);
+    color: var(--purple);
+    font-size: 50px;
+    text-shadow: 2px 2px var(--purple2);
+
+}
+
+p {
+    font-family: var(--font);
+}
+
+#fod {
+    margin-bottom: 0px;
+    margin-top: 40px;
 }
 
 
-#question{
+
+
+#main{
+    display: block;
+    
     margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
     padding: 2%;
     text-align: center;
-    height: 500px;
+    height: 100%;
     width: 800px;
     background-color: rgba(0, 0, 0, 0.776);
-
 
     font-size: 20px;
     color: var(--white);
 
 }
 
+
+
 button {
-    border: 0px;
+    font-family: var(--font);
+
+    border: 4px solid var(--green);
     height: 50px;
-    background-color: var(--green);
+    background-color: var(--green2);
     color: var(--white);
     padding: 2%;
+    transform: skew(-20deg);
+
 
 }
 
 button:hover {
-    background-color: rgb(128, 49, 0);
+    color: rgb(0, 0, 0);
 
 
 }
 
 
 #question img {
-    width: 40%;
+    width: 30%;
     text-align: center;
 }
+
+.labels {
+    display: flex;
+}
+
+label {
+    display: flex;
+    margin: auto;
+    width: 25%;
+    
+    font-family: var(--font);
+    font-size: 16px;
+    text-align: center;
+
+
+    border: 4px solid var(--green);
+    height: 20px;
+    background-color: var(--green2);
+    color: var(--white);
+    padding: 2%;
+    transform: skew(-20deg);
+}
+
+
 
 #headerr {
     display: flex;
